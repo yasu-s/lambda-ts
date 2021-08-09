@@ -1,14 +1,15 @@
-const path = require('path');
-const glob = require('glob');
-const nodeExternals = require('webpack-node-externals');
+import * as webpack from 'webpack';
+import * as path from 'path';
+import * as glob from 'glob';
+import * as nodeExternals from 'webpack-node-externals';
 
-const entries = {};
+const entries: { [key: string]: string } = {};
 glob.sync('./src/handlers/**/*.ts').map((value) => {
   console.log(value);
   entries[path.basename(value, '.ts')] = value;
 });
 
-module.exports = {
+const config: webpack.Configuration = {
   entry: entries,
 
   output: {
@@ -24,9 +25,11 @@ module.exports = {
   },
 
   target: 'node',
-  externals: [nodeExternals()],
-  mode: process.env.NODE_ENV || 'production',
+  externals: [nodeExternals.default()],
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   module: {
     rules: [{ test: /\.tsx?$/, loader: 'ts-loader' }],
   },
 };
+
+export default config;
