@@ -5,9 +5,7 @@
       "source.fixAll.eslint": true,
     }
   },
-  "eslint.options": { "configFile": "./src/handlers/hello-world/.eslintrc.json" },
-  // "eslint.nodePath": "./tools/eslint/node_modules",
-  // "eslint.options": { "configFile": "./tools/eslint/.eslintrc.json" },
+  "eslint.options": { "configFile": "./tools/eslint/.eslintrc.json" },
   "editor.tabSize": 2,
   "files.insertFinalNewline": true,
   "files.encoding": "utf8",
