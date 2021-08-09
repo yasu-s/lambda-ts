@@ -1,4 +1,7 @@
 tests/*
-*.ts
+.vscode
+src
 tsconfig.json
 webpack.config.js
+template.yaml
+*.md

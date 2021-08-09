@@ -5,7 +5,6 @@
       "source.fixAll.eslint": true,
     }
   },
-  "eslint.options": { "configFile": "./tools/eslint/.eslintrc.json" },
   "editor.tabSize": 2,
   "files.insertFinalNewline": true,
   "files.encoding": "utf8",

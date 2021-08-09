@@ -11,8 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/src/handlers/hello-world/node_modules/.bin/run-func",
-      "cwd": "${workspaceFolder}/src/handlers/hello-world",
+      "program": "${workspaceFolder}/node_modules/.bin/run-func",
       "args": [
         "dist/app.js",
         "lambdaHandler"
