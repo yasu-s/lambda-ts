@@ -223,19 +223,6 @@ ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
-argparse@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/argparse/-/argparse-2.0.1.tgz#246f50f3ca78a3240f6c997e8a9bd1eac49e4b38"
-  integrity sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
-
-aws-sam-webpack-plugin@^0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/aws-sam-webpack-plugin/-/aws-sam-webpack-plugin-0.10.0.tgz#435baa07a2f5cff0c6008ff73f67718a862fe537"
-  integrity sha512-/ETqP2vKYUZEQi4HCqwA1PPKzSvgxCfn2/eHGVcbrfQPV8kO14JXltOTm9YiA8FcUbrj26MIX20vcxXY7YffNA==
-  dependencies:
-    js-yaml "^4.1.0"
-    yaml-cfn "^0.3.1"
-
 aws-sdk@^2.963.0:
   version "2.963.0"
   resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.963.0.tgz#9655743e69e9466c7aed5962a680c330a6cad212"
@@ -571,13 +558,6 @@ jmespath@0.15.0:
   version "0.15.0"
   resolved "https://registry.yarnpkg.com/jmespath/-/jmespath-0.15.0.tgz#a3f222a9aae9f966f5d27c796510e28091764217"
   integrity sha1-o/Iiqarp+Wb10nx5ZRDigJF2Qhc=
-
-js-yaml@^4.0.0, js-yaml@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.1.0.tgz#c1fb65f8f5017901cdd2c951864ba18458a10602"
-  integrity sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==
-  dependencies:
-    argparse "^2.0.1"
 
 json-parse-better-errors@^1.0.2:
   version "1.0.2"
@@ -1040,13 +1020,6 @@ yallist@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
-
-yaml-cfn@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/yaml-cfn/-/yaml-cfn-0.3.1.tgz#83856ef620bcb48f0c09538d5e903a633453df62"
-  integrity sha512-8uEuOFPZFI06cQA+E37oRd9zHEPZVpkVjrBjXxWSt0Hy8hil/KnCcskpR7jwx6ejzfejIi5uzaoQgHTl6qzaNw==
-  dependencies:
-    js-yaml "^4.0.0"
 
 yocto-queue@^0.1.0:
   version "0.1.0"

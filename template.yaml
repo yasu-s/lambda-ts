@@ -26,8 +26,8 @@ Resources:
   HelloWorldTsFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: ./src/handlers/hello-world/dist
-      Handler: app.lambdaHandler
+      CodeUri: ./src/handlers/hello-world
+      Handler: dist/app.lambdaHandler
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function

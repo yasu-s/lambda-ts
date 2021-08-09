@@ -2,7 +2,7 @@
   "git.ignoreLimitWarning": true,
   "[typescript]": {
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true,
+      "source.fixAll.eslint": false,
     }
   },
   "eslint.options": { "configFile": "./tools/eslint/.eslintrc.json" },

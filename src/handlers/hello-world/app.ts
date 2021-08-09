@@ -7,13 +7,13 @@ exports.lambdaHandler = async (event: any, context: Context) => {
     response = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'hello world',
+        message: 'hello world ts',
         // location: ret.data.trim()
       }),
     };
   } catch (err) {
     console.log(err);
-    return err;
+    return err ;
   }
 
   return response;
