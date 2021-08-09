@@ -18,6 +18,6 @@ export const lambdaHandler = async (event: unknown, context: Context) => {
     return response;
   } catch (err) {
     console.log(err);
-    return err ;
+    return err;
   }
 };
