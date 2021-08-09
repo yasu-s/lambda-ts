@@ -102,3 +102,20 @@ dist
 
 # TernJS port file
 .tern-port
+
+# OSX
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# sam
+.aws-sam
+
+# Docker Compose
+.env
+.docker
+
+# vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
