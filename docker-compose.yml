@@ -1,0 +1,37 @@
+version: "3.9"
+services:
+  s3:
+    image: minio/minio:RELEASE.2021-06-07T21-40-51Z
+    ports:
+      - ${S3_PORT:-9000}:9000
+    volumes:
+      - ./.docker/minio/data:/export
+    environment:
+      - MINIO_ACCESS_KEY=${AWS_ACCESS_KEY_ID:-aws_access}
+      - MINIO_SECRET_KEY=${AWS_SECRET_ACCESS_KEY:-aws_secret}
+    command: server /export
+
+  mc:
+    image: minio/mc
+    depends_on:
+      - s3
+    environment:
+      - MINIO_ACCESS_KEY=${AWS_ACCESS_KEY_ID:-aws_access}
+      - MINIO_SECRET_KEY=${AWS_SECRET_ACCESS_KEY:-aws_secret}
+      - MINIO_BUCKET=${AWS_BUCKET:-test-bucket}
+    entrypoint: >
+      /bin/sh -c "
+      until (/usr/bin/mc config host add myminio http://s3:9000 $${MINIO_ACCESS_KEY} $${MINIO_SECRET_KEY}) do echo '...waiting...' && sleep 1; done;
+      /usr/bin/mc mb myminio/$${MINIO_BUCKET};
+      /usr/bin/mc policy set public myminio/$${MINIO_BUCKET};
+      exit 0;
+      "
+
+  stepfunctions:
+    image: amazon/aws-stepfunctions-local
+    ports:
+      - ${SFN_PORT:-8083}:8083
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID:-aws_access}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY:-aws_secret}
+      - LAMBDA_ENDPOINT=http://host.docker.internal:4574
