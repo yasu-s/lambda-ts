@@ -1,4 +1,5 @@
 const path = require('path');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: './app.ts',
@@ -16,7 +17,7 @@ module.exports = {
   },
 
   target: 'node',
-  externals: process.env.NODE_ENV === 'development' ? [] : ['aws-sdk'],
+  externals: [nodeExternals()],
   mode: process.env.NODE_ENV || 'production',
   module: {
     rules: [{ test: /\.tsx?$/, loader: 'ts-loader' }],
