@@ -749,6 +749,11 @@ resolve@^1.9.0:
     is-core-module "^2.2.0"
     path-parse "^1.0.6"
 
+run-func@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/run-func/-/run-func-1.0.5.tgz#f441a6dfcaccb2d53f9bdb9b747428dc45d1305b"
+  integrity sha512-v+Iopip1KE00OFRwIpLdLUsMXHDErktYAMYevTvCCwTBQWF+7z+vy886FUrOOBIwyX5OJC6tLdRKyzYHOfHQug==
+
 safe-buffer@^5.1.0:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.2.1.tgz#1eaf9fa9bdb1fdd4ec75f58f9cdb4e6b7827eec6"

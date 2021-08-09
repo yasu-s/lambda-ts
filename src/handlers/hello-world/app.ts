@@ -1,8 +1,9 @@
 import type { Context } from 'aws-lambda';
 
-exports.lambdaHandler = async (event: any, context: Context) => {
+exports.lambdaHandler = async (event: unknown, context: Context) => {
   let response;
   try {
+    console.log(`event: ${JSON.stringify(event)}, context: ${JSON.stringify(context)}`);
     // const ret = await axios(url);
     response = {
       statusCode: 200,
@@ -13,7 +14,7 @@ exports.lambdaHandler = async (event: any, context: Context) => {
     };
   } catch (err) {
     console.log(err);
-    return err ;
+    return err;
   }
 
   return response;
