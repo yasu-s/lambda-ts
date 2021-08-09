@@ -1,13 +1,20 @@
 const path = require('path');
+const glob = require('glob');
 const nodeExternals = require('webpack-node-externals');
 
+const entries = {};
+glob.sync('./src/handlers/**/*.ts').map((value) => {
+  console.log(value);
+  entries[path.basename(value, '.ts')] = value;
+});
+
 module.exports = {
-  entry: './src/handlers/hello-world/app.ts',
+  entry: entries,
 
   output: {
     libraryTarget: 'commonjs2',
     path: path.resolve('./dist'),
-    filename: 'app.js',
+    filename: '[name].js',
   },
 
   devtool: 'source-map',

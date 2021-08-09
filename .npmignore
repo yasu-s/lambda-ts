@@ -4,4 +4,5 @@ src
 tsconfig.json
 webpack.config.js
 template.yaml
-*.md
+.eslintrc.json
+README.md
