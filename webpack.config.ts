@@ -22,6 +22,9 @@ const config: webpack.Configuration = {
 
   resolve: {
     extensions: ['.ts', '.js'],
+    alias: {
+      '@sample': path.resolve('/src'), // rootPath にはルートのパスが入る。
+    },
   },
 
   target: 'node',

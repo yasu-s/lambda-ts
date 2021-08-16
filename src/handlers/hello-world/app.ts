@@ -1,6 +1,6 @@
 import type { Context } from 'aws-lambda';
 import * as axios from 'axios';
-import { getMessage } from '../../libs/utils';
+import { getMessage } from '@sample/libs/utils';
 
 export const lambdaHandler = async (event: unknown, context: Context) => {
   try {

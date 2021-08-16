@@ -4,6 +4,7 @@
     "module": "commonjs",
     "outDir": "./dist",
     "rootDir": "./",
+    "baseUrl": "./",
     "removeComments": true,
     "strict": true,
     "noUnusedLocals": true,
@@ -12,5 +13,8 @@
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "sourceMap": true,
+    "paths": {
+      "@sample/*": ["./src/*"]
+    }
   }
 }
