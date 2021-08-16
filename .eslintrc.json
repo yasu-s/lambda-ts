@@ -30,6 +30,7 @@
         "jsxBracketSameLine": false
       }
     ],
+    "@typescript-eslint/array-type": ["error"],
     "complexity": ["warn", 10],
     "prefer-template": "error",
     "max-depth": ["warn", 3],
