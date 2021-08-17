@@ -120,3 +120,4 @@ dist
 !.vscode/launch.json
 !.vscode/settings.json
 !.vscode/extensions.json
+app___vsctk___template.yaml

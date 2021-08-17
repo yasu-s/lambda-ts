@@ -3,6 +3,7 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:prettier/recommended",
     "prettier"
   ],
@@ -16,7 +17,8 @@
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
   "rules": {
     "prettier/prettier": [
@@ -30,10 +32,11 @@
         "jsxBracketSameLine": false
       }
     ],
-    "@typescript-eslint/array-type": ["error"],
+    "eqeqeq": "error",
     "complexity": ["warn", 10],
     "prefer-template": "error",
     "max-depth": ["warn", 3],
-    "max-lines-per-function": ["warn", 20]
+    "max-lines-per-function": ["warn", 30],
+    "@typescript-eslint/array-type": ["error"]
   }
 }
